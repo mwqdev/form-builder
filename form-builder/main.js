@@ -1,42 +1,39 @@
 var pageBody = document.querySelector('body');
 var pageHeader = document.createElement('header');
 var pageFooter = document.createElement('footer');
-
 var formContainer = document.createElement('div');
-formContainer.className = 'formContainer';
-
 var formHeader = document.createElement('div');
-formHeader.className = 'formHeader';
 var headerText = document.createElement('h1');
 var formH1 = document.createTextNode('Sign Up For My Web App');
-headerText.appendChild(formH1);
-formHeader.appendChild(headerText);
-
 var formContent = document.createElement('div');
-formContent.className = 'formContent';
-
 var formFooter = document.createElement('div');
-formFooter.className = 'formFooter';
 var formButton = document.createElement('button');
-formFooter.appendChild(formButton);
+var formButtonText = document.createTextNode('Submit Form');
+
+formHeader.className = 'formHeader';
+formContainer.className = 'formContainer';
+formContent.className = 'formContent';
+formFooter.className = 'formFooter';
 
 pageBody.appendChild(pageHeader);
 pageBody.appendChild(formContainer);
-    formContainer.appendChild(formHeader);
-    formContainer.appendChild(formContent);
-    formContainer.appendChild(formFooter);
 pageBody.appendChild(pageFooter);
-    
+formContainer.appendChild(formHeader);
+formContainer.appendChild(formContent);
+formContainer.appendChild(formFooter);
+headerText.appendChild(formH1);
+formHeader.appendChild(headerText);
+formButton.appendChild(formButtonText);
+formFooter.appendChild(formButton);
 
 for (var i = 0; i < formData.length; i++) {
 
     var control = formData[i];
-
     var options = control.options;
 
     var label = document.createElement('label');
     label.setAttribute('for', control.id);
-    formContainer.appendChild(label);
+    formContent.appendChild(label);
 
     var input = document.createElement('input');
     input.setAttribute('type', control.type);
