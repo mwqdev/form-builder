@@ -1,0 +1,36 @@
+body {
+    width: 500px;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+
+.formContainer {
+    
+}
+
+.formContent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.formContent input, select, textarea {
+    width: 90%;
+    margin: 1rem 0;
+}
+
+.formHeader {
+    width: 100%;
+    background-color: #5C8AC7;
+}
+
+.formHeader h1 {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.formFooter {
+    width: 100%;
+    background-color: #CDDDEF;
+}
